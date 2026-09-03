@@ -1,13 +1,16 @@
 <template>
-  <header class="sticky w-full border-b border-gray-300 bg-[#F7F2EA]">
+  <header class="fixed w-full border-b border-black/10 bg-[#F7F2EA]">
     <div
       class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8"
     >
       <NuxtLink to="/" class="flex flex-col text-[#252220] no-underline">
         <span
           class="font-[var(--font-serif)] text-lg font-medium uppercase tracking-[0.04em]"
-          >Imperial Business Link</span
-        >
+          ><img
+            src="/assets/images/logo/horizontal.png"
+            alt="Imperial Business Link"
+            class="h-15 w-auto object-contain"
+        /></span>
       </NuxtLink>
       <nav class="hidden items-center gap-9 md:flex">
         <NuxtLink to="/" class="nav-link" exact-active-class="is-active">

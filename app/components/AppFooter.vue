@@ -7,7 +7,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
 <template>
   <footer class="border-t border-black/10 bg-[#EDE8DE] text-[#252220]">
     <div
-      class="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-3 md:px-8"
+      class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3 md:px-8"
     >
       <div class="flex items-center">
         <div class="text-center">
@@ -21,15 +21,24 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
           <p
             class="mt-8 text-lg text-center uppercase tracking-[0.2em] text-[#77716C] flex items-center justify-center gap-8"
           >
+            <span class="flex items-center justify-center">
+              <a
+                href="https://wa.me/9779851132019"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><WhatsappIcon height="1em" /></a
+            ></span>
             <span class="flex items-center justify-center"
-              ><WhatsappIcon height="1em"
-            /></span>
-            <span class="flex items-center justify-center"
-              ><ViberIcon height="1em"
-            /></span>
-            <span class="flex items-center justify-center"
-              ><FacebookMessengerIcon height="1em"
-            /></span>
+              ><a href="viber://chat?number=%2B9779851132019"
+                ><ViberIcon height="1em" /></a
+            ></span>
+            <span class="flex items-center justify-center">
+              <a
+                href="https://m.me/dhruba.neupane.90"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><FacebookMessengerIcon height="1em" /></a
+            ></span>
           </p>
         </div>
       </div>
@@ -52,7 +61,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
           </NuxtLink>
 
           <NuxtLink
-            to="/new-arrivals"
+            to="/new_arrivals"
             class="transition-colors hover:text-[#252220]"
           >
             New Arrivals
@@ -75,7 +84,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
         <div class="mt-8 space-y-4 text-sm text-[#77716C]">
           <p>Kathmandu, Nepal</p>
 
-          <p>info@imperialbusinesslink.com.np</p>
+          <p>info@imperialshoes.com.np</p>
 
           <p>+977 9851132019</p>
 
@@ -89,7 +98,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
     <!-- Bottom Bar -->
     <div class="border-t border-black/10">
       <div
-        class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-7 text-xs uppercase tracking-[0.18em] text-[#9A948E] md:flex-row md:items-center md:justify-between md:px-8"
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-7 text-xs uppercase tracking-[0.18em] text-[#77716C] md:flex-row md:items-center md:justify-between md:px-8"
       >
         <p>© 2026 Imperial Business Link. All Rights Reserved.</p>
 
