@@ -7,7 +7,7 @@
         <span
           class="font-[var(--font-serif)] text-lg font-medium uppercase tracking-[0.04em]"
           ><img
-            src="/assets/images/logo/horizontal.png"
+            src="/assets/images/logo.svg"
             alt="Imperial Business Link"
             class="h-15 w-auto object-contain"
         /></span>
