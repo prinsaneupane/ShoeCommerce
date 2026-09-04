@@ -90,11 +90,6 @@ const goToProducts = () => {
 
         <!-- Controls Below Carousel -->
         <div class="mt-5 flex items-center justify-between">
-          <!-- Counter -->
-          <p class="text-[12px] uppercase tracking-[0.18em] text-[#77716C]">
-            0{{ currentImage + 1 }} / 0{{ images.length }}
-          </p>
-
           <!-- Indicators -->
           <div class="flex items-center gap-2">
             <button

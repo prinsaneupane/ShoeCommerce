@@ -7,7 +7,7 @@
         <span
           class="font-[var(--font-serif)] text-lg font-medium uppercase tracking-[0.04em]"
           ><img
-            src="/assets/images/logo.svg"
+            src="/assets/images/logo/logo.svg"
             alt="Imperial Business Link"
             class="h-15 w-auto object-contain"
         /></span>
@@ -17,13 +17,13 @@
           Home
         </NuxtLink>
 
-        <NuxtLink to="/products" class="nav-link" active-class="is-active">
-          Products
-        </NuxtLink>
-
         <NuxtLink to="/new_arrivals" class="nav-link" active-class="is-active"
           >New Arrivals</NuxtLink
         >
+        
+        <NuxtLink to="/products" class="nav-link" active-class="is-active">
+          Products
+        </NuxtLink>
 
         <NuxtLink to="/contact" class="nav-link" active-class="is-active">
           Contact

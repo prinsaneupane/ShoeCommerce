@@ -75,7 +75,7 @@ Availability: ${product.availability}
 
 <template>
   <section v-if="product" class="min-h-screen bg-[#F7F2EA] text-[#252220]">
-    <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 pt-28 pb-20 md:px-8 md:pt-32 md:pb-24">
       <!-- Back Button -->
       <button
         type="button"
@@ -87,7 +87,7 @@ Availability: ${product.availability}
       </button>
 
       <!-- Product Layout -->
-      <div class="grid gap-14 md:grid-cols-2">
+      <div class="grid gap-12 md:grid-cols-2 md:items-start">
         <!-- Product Images -->
         <div class="space-y-5">
           <div
@@ -100,7 +100,7 @@ Availability: ${product.availability}
         </div>
 
         <!-- Product Info -->
-        <div class="md:sticky md:top-28 md:self-start">
+        <div class="md:top-28">
           <p
             class="text-xs font-medium uppercase tracking-[0.2em] text-[#A06B3F]"
           >

@@ -4,21 +4,18 @@ defineProps({
   code: String,
   category: String,
   image: String,
-})
+});
 </script>
 
 <template>
-  <NuxtLink
-    :to="`/products/${code}`"
-    class="block"
-  >
+  <NuxtLink :to="`/products/${code}`" class="block">
     <article class="group cursor-pointer">
       <!-- Image -->
       <div class="overflow-hidden bg-[#EDE8DE]">
         <img
           :src="image"
           :alt="name"
-          class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          class="aspect-[5/5] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
         />
       </div>
 

@@ -12,6 +12,7 @@ import RetailSection from "~/components/home/RetailSection.vue";
 const categories = ["All", "Sneakers", "Sports", "Casual", "Formal", "Sandals"];
 
 const activeCategory = ref("All");
+const searchQuery = ref("");
 
 const products = [
   {
@@ -41,13 +42,28 @@ const products = [
 ];
 
 const filteredProducts = computed(() => {
-  if (activeCategory.value === "All") {
-    return products;
+  let result = products;
+
+  // Category filter
+  if (activeCategory.value !== "All") {
+    result = result.filter(
+      (product) => product.category === activeCategory.value,
+    );
   }
 
-  return products.filter(
-    (product) => product.category === activeCategory.value,
-  );
+  // Search filter
+  if (searchQuery.value.trim()) {
+    const query = searchQuery.value.toLowerCase();
+
+    result = result.filter(
+      (product) =>
+        product.name.toLowerCase().includes(query) ||
+        product.code.toLowerCase().includes(query) ||
+        product.category.toLowerCase().includes(query),
+    );
+  }
+
+  return result;
 });
 </script>
 
@@ -76,7 +92,20 @@ const filteredProducts = computed(() => {
       </div>
 
       <!-- Filters -->
-      <div class="mt-14 flex w-full justify-end">
+      <div
+        class="mt-14 flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+      >
+        <!-- Search -->
+        <div class="w-full md:max-w-sm">
+          <input
+            v-model="searchQuery"
+            type="text"
+            placeholder="Search products..."
+            class="w-full border-0 border-b border-black/10 bg-transparent py-3 text-sm text-[#252220] outline-none placeholder:text-[#9A948E] focus:border-[#252220]"
+          />
+        </div>
+
+        <!-- Filters -->
         <ProductFilters
           v-model:active-category="activeCategory"
           :categories="categories"
