@@ -10,27 +10,27 @@ const categories = ["All", "Sneakers", "Sports", "Casual", "Formal", "Sandals"];
 const activeCategory = ref("All");
 const newArrivals = [
   {
-    name: "Classic Low Sneaker",
-    code: "IBL-001",
-    category: "Sneakers",
+    name: "TBL Sports Shoes",
+    code: "9127",
+    category: "Sports",
     image: shoe1,
   },
   {
-    name: "Everyday Runner",
-    code: "IBL-002",
+    name: "Adivon Sports Shoes",
+    code: "263050",
     category: "Sports",
     image: shoe2,
   },
   {
-    name: "Urban Casual",
+    name: "Urban Street Shoe",
     code: "IBL-003",
-    category: "Casual",
+    category: "Sneakers",
     image: shoe3,
   },
   {
-    name: "Essential Formal",
-    code: "IBL-004",
-    category: "Formal",
+    name: "Adivon Sneakers",
+    code: "263049",
+    category: "Sneakers",
     image: shoe4,
   },
 ];
@@ -90,7 +90,18 @@ const filteredArrivals = computed(() => {
         :image="product.image"
       />
     </div>
+    <div
+      v-if="filteredArrivals.length === 0"
+      class="mx-auto max-w-7xl px-6 py-20 text-center md:px-8"
+    >
+      <h3 class="font-serif text-2xl font-medium text-[#252220]">
+        No new arrivals yet
+      </h3>
 
+      <p class="mt-3 text-sm leading-6 text-[#77716C]">
+        There are currently no new arrivals available in this category.
+      </p>
+    </div>
     <!-- Retail Section -->
     <RetailSection />
   </section>

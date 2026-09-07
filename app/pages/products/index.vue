@@ -16,27 +16,27 @@ const searchQuery = ref("");
 
 const products = [
   {
-    name: "Classic Low Sneaker",
-    code: "IBL-001",
-    category: "Sneakers",
+    name: "TBL Sports Shoes",
+    code: "9127",
+    category: "Sports",
     image: shoe1,
   },
   {
-    name: "Everyday Runner",
-    code: "IBL-002",
+    name: "Adivon Sports Shoes",
+    code: "263050",
     category: "Sports",
     image: shoe2,
   },
   {
-    name: "Urban Casual",
+    name: "Urban Street Shoe",
     code: "IBL-003",
-    category: "Casual",
+    category: "Sneakers",
     image: shoe3,
   },
   {
-    name: "Essential Formal",
-    code: "IBL-004",
-    category: "Formal",
+    name: "Adivon Sneakers",
+    code: "263049",
+    category: "Sneakers",
     image: shoe4,
   },
 ];
@@ -125,8 +125,20 @@ const filteredProducts = computed(() => {
           :image="product.image"
         />
       </div>
-    </div>
+      <!-- Empty State -->
+      <div v-if="filteredProducts.length === 0" class="py-20 text-center">
+        <h3 class="font-serif text-2xl font-medium text-[#252220]">
+          {{ searchQuery.trim() ? "No products found" : "No items added yet" }}
+        </h3>
 
-    <RetailSection />
+        <p class="mt-3 text-sm leading-6 text-[#77716C]">
+          {{
+            searchQuery.trim()
+              ? "Try searching with a different name, product code, or category."
+              : "There are currently no products available in this category."
+          }}
+        </p>
+      </div>
+    </div>
   </section>
 </template>

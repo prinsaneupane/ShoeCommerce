@@ -6,14 +6,14 @@ import shoe4 from "~/assets/images/hero/shoe-4.jpeg";
 
 const products = [
   {
-    name: "Classic Low Sneaker",
-    code: "IBL-001",
-    category: "Casual",
+    name: "TBL Sports Shoes",
+    code: "9127",
+    category: "Sports",
     image: shoe1,
   },
   {
-    name: "Everyday Runner",
-    code: "IBL-002",
+    name: "Adivon Sports Shoes",
+    code: "263050",
     category: "Sports",
     image: shoe2,
   },
@@ -24,9 +24,9 @@ const products = [
     image: shoe3,
   },
   {
-    name: "Essential Casual",
-    code: "IBL-004",
-    category: "Casual",
+    name: "Adivon Sneakers",
+    code: "263049",
+    category: "Sneakers",
     image: shoe4,
   },
 ];

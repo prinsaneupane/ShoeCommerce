@@ -84,7 +84,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
         <div class="mt-8 space-y-4 text-sm text-[#77716C]">
           <p>Kathmandu, Nepal</p>
 
-          <p>info@imperialshoes.com.np</p>
+          <p>neupane.dhruba@gmail.com</p>
 
           <p>+977 9851132019</p>
 
