@@ -38,25 +38,26 @@ const goToNewArrivals = () => {
 
 <template>
   <section class="bg-[#EDE8DE] text-[#252220]">
-    <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24">
+    <div class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
       <!-- Section Heading -->
       <div class="max-w-2xl">
         <p
-          class="text-[18px] font-medium uppercase tracking-[0.28em] text-[#A06B3F]"
+          class="text-[10px] font-medium uppercase tracking-[0.2em] text-[#A06B3F] md:text-[18px] md:tracking-[0.28em]"
         >
           New Arrivals
         </p>
 
         <h2
-          class="mt-5 font-serif text-5xl font-medium leading-[1.1] md:text-6xl"
+          class="mt-8 font-serif text-2xl font-medium leading-[1.15] md:mt-5 md:text-6xl md:leading-[1.1]"
         >
           Fresh Styles.
           <br />
           Regular Stock.
         </h2>
 
+        <!-- Description hidden on mobile -->
         <p
-          class="mt-6 max-w-xl font-[var(--font-sans)] text-[15px] leading-7 text-[#77716C]"
+          class="mt-6 hidden max-w-xl font-[var(--font-sans)] text-[15px] leading-7 text-[#77716C] md:block"
         >
           Discover the latest footwear added to our wholesale collection,
           selected for retailers looking for fresh styles and regular stock.
@@ -64,13 +65,17 @@ const goToNewArrivals = () => {
       </div>
 
       <!-- Divider -->
-      <div class="my-12 border-t border-black/10"></div>
+      <div class="my-8 border-t border-black/10 md:my-12"></div>
 
       <!-- Product Preview -->
       <div
-        class="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4"
+        class="grid grid-cols-2 gap-x-3 gap-y-8 md:gap-x-6 md:gap-y-12 lg:grid-cols-4"
       >
-        <article v-for="product in products" :key="product.code" class="group">
+        <article
+          v-for="product in products"
+          :key="product.code"
+          class="group min-w-0"
+        >
           <!-- Image -->
           <div class="overflow-hidden bg-[#F7F2EA]">
             <img
@@ -81,18 +86,20 @@ const goToNewArrivals = () => {
           </div>
 
           <!-- Details -->
-          <div class="mt-5">
+          <div class="mt-3 md:mt-5">
             <p
-              class="text-[14px] font-medium uppercase tracking-[0.2em] text-[#A06B3F]"
+              class="text-[9px] font-medium uppercase tracking-[0.15em] text-[#A06B3F] md:text-[14px] md:tracking-[0.2em]"
             >
               {{ product.category }}
             </p>
 
-            <h3 class="mt-2 font-sans text-[16px] font-medium text-[#252220]">
+            <h3
+              class="mt-2 font-sans text-xs font-medium leading-5 text-[#252220] md:text-[16px]"
+            >
               {{ product.name }}
             </h3>
 
-            <p class="mt-1 text-xs text-[#77716C]">
+            <p class="mt-1 text-[10px] text-[#77716C] md:text-xs">
               {{ product.code }}
             </p>
           </div>
@@ -100,11 +107,11 @@ const goToNewArrivals = () => {
       </div>
 
       <!-- View All -->
-      <div class="mt-14 flex justify-center">
+      <div class="mt-10 flex justify-center md:mt-14">
         <button
           type="button"
           @click="goToNewArrivals"
-          class="bg-[#252220] px-7 py-4 font-[var(--font-sans)] text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
+          class="bg-[#252220] px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-white transition-colors duration-200 hover:bg-[#A06B3F] md:px-7 md:py-4 md:text-xs md:tracking-[0.2em]"
         >
           View New Arrivals
         </button>

@@ -69,9 +69,9 @@ const filteredProducts = computed(() => {
 
 <template>
   <section class="min-h-screen bg-[#F7F2EA] text-[#252220]">
-    <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-20 md:px-8 md:py-24">
       <!-- Heading -->
-      <div class="max-w-2xl">
+      <div class="hidden max-w-2xl md:block">
         <p
           class="text-[18px] font-medium uppercase tracking-[0.28em] text-[#A06B3F] mt-16"
         >
@@ -93,7 +93,7 @@ const filteredProducts = computed(() => {
 
       <!-- Filters -->
       <div
-        class="mt-14 flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+        class="flex flex-col gap-6 md:mt-14 md:flex-row md:items-center md:justify-between"
       >
         <!-- Search -->
         <div class="w-full md:max-w-sm">
@@ -114,7 +114,7 @@ const filteredProducts = computed(() => {
 
       <!-- Product Grid -->
       <div
-        class="mt-16 grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4 border-t border-black/10 pt-14"
+        class="mt-10 grid grid-cols-2 gap-x-3 gap-y-8 border-t border-black/10 pt-10 md:mt-16 md:gap-x-6 md:gap-y-14 md:pt-14 lg:grid-cols-4"
       >
         <ProductCard
           v-for="product in filteredProducts"

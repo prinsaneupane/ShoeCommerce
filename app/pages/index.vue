@@ -5,8 +5,12 @@ import RetailSection from "~/components/home/RetailSection.vue";
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#F7F2EA]">
-    <HeroSection />
+  <div>
+    <!-- Desktop only -->
+    <div class="hidden md:block">
+      <HeroSection />
+    </div>
+
     <NewArrivalsSection />
     <RetailSection />
   </div>

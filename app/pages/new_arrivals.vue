@@ -49,26 +49,32 @@ const filteredArrivals = computed(() => {
 <template>
   <section class="min-h-screen bg-[#F7F2EA] text-[#252220]">
     <!-- Header -->
-    <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 md:px-8 md:pt-24 md:pb-20">
+      <!-- Always visible -->
       <p
-        class="text-[18px] font-medium uppercase tracking-[0.28em] text-[#A06B3F] mt-16"
+        class="text-sm font-medium uppercase tracking-[0.2em] text-[#A06B3F] md:mt-16 md:text-[18px] md:tracking-[0.28em]"
       >
         New Arrivals
       </p>
 
-      <h1
-        class="mt-5 font-serif text-5xl font-medium leading-[1.05] md:text-6xl"
-      >
-        Fresh Styles.
-        <br />
-        Regular Stock.
-      </h1>
+      <!-- Desktop only -->
+      <div class="hidden md:block">
+        <h1
+          class="mt-5 font-serif text-5xl font-medium leading-[1.05] md:text-6xl"
+        >
+          Fresh Styles.
+          <br />
+          Regular Stock.
+        </h1>
 
-      <p class="mt-6 max-w-xl text-[15px] leading-7 text-[#77716C]">
-        Discover the latest footwear added to our wholesale collection.
-      </p>
+        <p class="mt-6 max-w-xl text-[15px] leading-7 text-[#77716C]">
+          Discover the latest footwear added to our wholesale collection.
+        </p>
+      </div>
 
-      <div class="mt-12 border-t border-black/10"></div>
+      <div
+        class="hidden md:block md:mt-12 md:border-t md:border-black/10"
+      ></div>
     </div>
     <!-- Filters -->
     <div class="mx-auto flex w-full max-w-7xl justify-end px-6 md:px-8">
@@ -79,7 +85,7 @@ const filteredArrivals = computed(() => {
     </div>
     <!-- Product Grid -->
     <div
-      class="mx-auto grid max-w-7xl grid-cols-1 gap-x-6 gap-y-14 px-6 py-16 sm:grid-cols-2 md:px-8 lg:grid-cols-4"
+      class="mx-auto grid max-w-7xl grid-cols-2 gap-x-3 gap-y-8 px-6 py-10 md:gap-x-6 md:gap-y-14 md:px-8 md:py-16 lg:grid-cols-4"
     >
       <ProductCard
         v-for="product in filteredArrivals"

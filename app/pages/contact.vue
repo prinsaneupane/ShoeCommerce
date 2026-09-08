@@ -53,7 +53,7 @@ ${message.value}
       <!-- Left Side -->
       <form class="space-y-8">
         <p
-          class="text-[18px] font-medium uppercase tracking-[0.28em] text-[#A06B3F]"
+          class="text-[14px] font-medium uppercase tracking-[0.2em] text-[#A06B3F] md:text-[18px] md:tracking-[0.28em]"
         >
           Get in touch
         </p>

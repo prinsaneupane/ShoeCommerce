@@ -38,7 +38,7 @@ const goToProducts = () => {
 <template>
   <section class="bg-[#F7F2EA] text-[#252220]">
     <div
-      class="mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-16 md:px-8 md:py-20"
+      class="mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-12 px-6 pt-20 pb-16 md:grid-cols-2 md:gap-16 md:px-8 md:py-20"
     >
       <!-- Left Content -->
       <div class="max-w-xl">

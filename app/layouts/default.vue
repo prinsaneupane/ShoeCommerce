@@ -6,7 +6,7 @@ import AppFooter from "~/components/AppFooter.vue";
 <template>
   <div>
     <AppNavbar />
-    <main>
+    <main class="pt-[72px]">
       <slot />
     </main>
     <AppFooter />
