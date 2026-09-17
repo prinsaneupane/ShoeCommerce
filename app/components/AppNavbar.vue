@@ -33,9 +33,9 @@ watch(
         /></span>
       </NuxtLink>
       <nav class="hidden items-center gap-9 md:flex">
-        <NuxtLink to="/" class="nav-link" exact-active-class="is-active">
+        <!-- <NuxtLink to="/" class="nav-link" exact-active-class="is-active">
           Home
-        </NuxtLink>
+        </NuxtLink> -->
 
         <NuxtLink to="/new_arrivals" class="nav-link" active-class="is-active"
           >New Arrivals</NuxtLink
@@ -74,14 +74,14 @@ watch(
         id="mobile-navigation"
         class="absolute left-0 top-full w-full border-b border-black/10 bg-[#F7F2EA] px-5 pb-8 pt-4 md:hidden"
       >
-        <NuxtLink
+        <!-- <NuxtLink
           to="/"
           class="mobile-nav-link"
           exact-active-class="is-active"
           @click="closeMenu"
         >
           Home
-        </NuxtLink>
+        </NuxtLink> -->
 
         <NuxtLink
           to="/new_arrivals"

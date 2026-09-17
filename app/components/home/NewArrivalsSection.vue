@@ -1,7 +1,7 @@
 <script setup>
 import shoe1 from "~/assets/images/hero/shoe-1.jpeg";
 import shoe2 from "~/assets/images/hero/shoe-2.jpeg";
-import shoe3 from "~/assets/images/hero/shoe-3.jpeg";
+import shoe5 from "~/assets/images/hero/shoe-5.jpeg";
 import shoe4 from "~/assets/images/hero/shoe-4.jpeg";
 
 const products = [
@@ -12,22 +12,22 @@ const products = [
     image: shoe1,
   },
   {
+    name: "Adivon Sneakers",
+    code: "263049",
+    category: "Sneakers",
+    image: shoe4,
+  },
+  {
     name: "Adivon Sports Shoes",
     code: "263050",
     category: "Sports",
     image: shoe2,
   },
   {
-    name: "Urban Street Shoe",
-    code: "IBL-003",
+    name: "TBL Sneakers",
+    code: "p-2",
     category: "Sneakers",
-    image: shoe3,
-  },
-  {
-    name: "Adivon Sneakers",
-    code: "263049",
-    category: "Sneakers",
-    image: shoe4,
+    image: shoe5,
   },
 ];
 
@@ -56,12 +56,12 @@ const goToNewArrivals = () => {
         </h2>
 
         <!-- Description hidden on mobile -->
-        <p
+        <!-- <p
           class="mt-6 hidden max-w-xl font-[var(--font-sans)] text-[15px] leading-7 text-[#77716C] md:block"
         >
           Discover the latest footwear added to our wholesale collection,
           selected for retailers looking for fresh styles and regular stock.
-        </p>
+        </p> -->
       </div>
 
       <!-- Divider -->
@@ -78,11 +78,16 @@ const goToNewArrivals = () => {
         >
           <!-- Image -->
           <div class="overflow-hidden bg-[#F7F2EA]">
-            <img
-              :src="product.image"
-              :alt="product.name"
-              class="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-            />
+            <NuxtLink
+              :to="`/products/${product.code}`"
+              class="block overflow-hidden bg-[#F7F2EA]"
+            >
+              <img
+                :src="product.image"
+                :alt="product.name"
+                class="aspect-[5/5] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+            </NuxtLink>
           </div>
 
           <!-- Details -->
@@ -111,7 +116,7 @@ const goToNewArrivals = () => {
         <button
           type="button"
           @click="goToNewArrivals"
-          class="bg-[#252220] px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-white transition-colors duration-200 hover:bg-[#A06B3F] md:px-7 md:py-4 md:text-xs md:tracking-[0.2em]"
+          class="mt-8 rounded-lg bg-[#252220] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
         >
           View New Arrivals
         </button>

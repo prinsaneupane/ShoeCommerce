@@ -1,48 +1,98 @@
 <script setup>
-import shoe1 from "~/assets/images/hero/shoe-1.jpeg";
-import shoe2 from "~/assets/images/hero/shoe-2.jpeg";
-import shoe3 from "~/assets/images/hero/shoe-3.jpeg";
-import shoe4 from "~/assets/images/hero/shoe-4.jpeg";
+import shoe1 from "~/assets/images/products/shoe-1.jpeg";
+import shoe2 from "~/assets/images/products/shoe-2.jpeg";
+import shoe3 from "~/assets/images/products/shoe-3.jpeg";
+import shoe4 from "~/assets/images/products/shoe-4.jpeg";
+import shoe5 from "~/assets/images/products/shoe-5.jpeg";
+import shoe6 from "~/assets/images/products/shoe-6.jpeg";
+import shoe7 from "~/assets/images/products/shoe-7.jpeg";
+import shoe8 from "~/assets/images/products/shoe-8.jpeg";
+import shoe9 from "~/assets/images/products/shoe-9.jpeg";
 
 const route = useRoute();
 const router = useRouter();
 
 const products = [
   {
-    code: "IBL-001",
-    name: "Classic Low Sneaker",
-    category: "Sneakers",
+    name: "TBL Sports Shoes",
+    code: "9127",
+    category: "Sports",
     sizes: "39–44",
     colors: "White, Black",
     availability: "In Stock",
     images: [shoe1],
   },
   {
-    code: "IBL-002",
-    name: "Everyday Runner",
+    name: "Adivon Sports Shoes",
+    code: "263050",
     category: "Sports",
     sizes: "40–45",
     colors: "Grey, Black, White",
     availability: "In Stock",
     images: [shoe2],
   },
+  // {
+  //   name: "Urban Street Shoe",
+  //   code: "IBL-003",
+  //   category: "Sneakers",
+  //   sizes: "39–43",
+  //   colors: "Brown, Black",
+  //   availability: "Limited Stock",
+  //   images: [shoe3],
+  // },
   {
-    code: "IBL-003",
-    name: "Urban Casual",
-    category: "Casual",
-    sizes: "39–43",
-    colors: "Brown, Black",
-    availability: "Limited Stock",
-    images: [shoe3],
-  },
-  {
-    code: "IBL-004",
-    name: "Essential Formal",
-    category: "Formal",
+    name: "Adivon Sneakers",
+    code: "263049",
+    category: "Sneakers",
     sizes: "40–44",
     colors: "Black, Brown",
     availability: "In Stock",
     images: [shoe4],
+  },
+  {
+    name: "TBL Sneakers",
+    code: "p-2",
+    category: "Sneakers",
+    sizes: "39–44",
+    colors: "White, Black",
+    availability: "In Stock",
+    images: [shoe5],
+  },
+  {
+    name: "Songta Badminton Shoes",
+    code: "145",
+    category: "Sports",
+    sizes: "39–44",
+    colors: "White, Black",
+    availability: "In Stock",
+    images: [shoe6],
+  },
+  {
+    name: "TBL Running Shoes",
+    code: "9126",
+    category: "Casual",
+    sizes: "39–44",
+    colors: "Brown, Black",
+    availability: "In Stock",
+    images: [shoe7],
+  },
+  {
+    name: "Songta Sneakers",
+    code: "299",
+    category: "Sneakers",
+    sizes: "40–45",
+    colors: "Black, Brown",
+    availability: "Limited Stock",
+    images: [shoe8],
+  },
+  {
+    name: "Adivon Casual Shoes",
+    code: "263040",
+    category: "Casual",
+    sizes: "39–44",
+    colors: "Black, Brown",
+    availability: "In Stock",
+    images: [shoe9],
   },
 ];
 
@@ -80,9 +130,9 @@ Availability: ${product.availability}
       <button
         type="button"
         @click="goBack"
-        class="mb-10 inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.18em] text-[#595653] transition hover:text-[#A06B3F]"
+        class="mb-10 inline-flex items-center gap-3 text-[14px] font-medium uppercase tracking-[0.18em] text-[#595653] transition hover:text-[#A06B3F]"
       >
-        <span>←</span>
+        <span>‹</span>
         Back to Products
       </button>
 

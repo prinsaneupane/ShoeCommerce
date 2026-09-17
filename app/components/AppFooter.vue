@@ -10,8 +10,8 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
       class="mx-auto grid max-w-7xl gap-12 px-6 py-12 md:grid-cols-3 md:px-8 md:py-16"
     >
       <!-- Brand -->
-      <div class="flex items-center justify-center md:justify-start">
-        <div class="text-center">
+      <div class="flex items-start justify-center md:justify-start">
+        <div class="text-center md:text-left">
           <h2 class="text-sm font-semibold uppercase tracking-[0.18em]">
             Imperial Business Link
           </h2>
@@ -20,42 +20,42 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
             Wholesale Footwear · Nepal
           </p>
 
-          <!-- Social Icons -->
+          <!-- Social Links -->
           <div
-            class="mt-8 flex items-center justify-center gap-8 text-lg text-[#77716C]"
+            class="mt-8 flex flex-col items-center gap-4 text-sm text-[#77716C] md:items-start"
           >
             <a
               href="https://wa.me/9779851132019"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="WhatsApp"
-              class="transition-colors hover:text-[#252220]"
+              class="flex items-center gap-3 transition-colors hover:text-[#252220]"
             >
-              <WhatsappIcon height="1em" />
+              <WhatsappIcon class="text-base" height="1em" />
+              <span>WhatsApp</span>
             </a>
 
             <a
               href="viber://chat?number=%2B9779851132019"
-              aria-label="Viber"
-              class="transition-colors hover:text-[#252220]"
+              class="flex items-center gap-3 transition-colors hover:text-[#252220]"
             >
-              <ViberIcon height="1em" />
+              <ViberIcon class="text-base" height="1em" />
+              <span>Viber</span>
             </a>
 
             <a
               href="https://m.me/dhruba.neupane.90"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook Messenger"
-              class="transition-colors hover:text-[#252220]"
+              class="flex items-center gap-3 transition-colors hover:text-[#252220]"
             >
-              <FacebookMessengerIcon height="1em" />
+              <FacebookMessengerIcon class="text-base" height="1em" />
+              <span>Messenger</span>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Navigation: Desktop Only -->
+      <!-- Navigation -->
       <div class="hidden md:block">
         <h3 class="text-sm font-semibold uppercase tracking-[0.18em]">
           Navigate
@@ -89,7 +89,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
         </nav>
       </div>
 
-      <!-- Contact: Desktop Only -->
+      <!-- Contact -->
       <div class="hidden md:block">
         <h3 class="text-sm font-semibold uppercase tracking-[0.18em]">
           Contact
@@ -114,7 +114,7 @@ import FacebookMessengerIcon from "@iconify-vue/fa-brands/facebook-messenger";
       <div
         class="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-7 text-center text-[10px] uppercase tracking-[0.12em] text-[#77716C] md:flex-row md:justify-between md:px-8 md:text-left md:text-xs md:tracking-[0.18em]"
       >
-        <p>© 2026 Imperial Business Link. All Rights Reserved.</p>
+        <p>© 2026 All Rights Reserved.</p>
 
         <p class="hidden md:block">Wholesale Footwear Supplier · Nepal</p>
       </div>

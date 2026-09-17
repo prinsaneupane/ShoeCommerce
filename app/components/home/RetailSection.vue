@@ -23,17 +23,17 @@ const goToContact = () => {
           Built for retail.
         </h2>
 
-        <p
+        <!-- <p
           class="mt-5 max-w-xl font-[var(--font-sans)] text-sm leading-6 text-[#77716C] md:mt-6 md:text-[15px] md:leading-7"
         >
           A practical wholesale footwear collection for retailers looking for
           variety, regular stock and dependable supply.
-        </p>
+        </p> -->
 
         <button
           type="button"
           @click="goToContact"
-          class="mt-7 bg-[#252220] px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-white transition-colors duration-200 hover:bg-[#A06B3F] md:mt-8 md:px-7 md:py-4 md:text-xs md:tracking-[0.2em]"
+          class="mt-8 rounded-lg bg-[#252220] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
         >
           Get in Touch
         </button>

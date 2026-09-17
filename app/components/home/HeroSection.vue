@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { ssrGetDynamicModelProps } from "vue/server-renderer";
 
 import shoe1 from "~/assets/images/hero/shoe-1.jpeg";
 import shoe2 from "~/assets/images/hero/shoe-2.jpeg";
@@ -38,7 +37,7 @@ const goToProducts = () => {
 <template>
   <section class="bg-[#F7F2EA] text-[#252220]">
     <div
-      class="mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-12 px-6 pt-20 pb-16 md:grid-cols-2 md:gap-16 md:px-8 md:py-20"
+      class="mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-12 px-6 pt-20 pb-16 md:grid-cols-2 md:gap-16 md:px-8"
     >
       <!-- Left Content -->
       <div class="max-w-xl">
@@ -51,7 +50,7 @@ const goToProducts = () => {
 
         <!-- Hero Heading -->
         <h1
-          class="mt-6 font-serif text-5xl font-medium leading-[1.05] text-[#252220] md:text-6xl"
+          class="mt-6 font-serif text-6xl font-medium leading-[1.05] text-[#252220] md:text-6xl"
         >
           Footwear for
           <br />
@@ -59,23 +58,23 @@ const goToProducts = () => {
         </h1>
 
         <!-- Description -->
-        <p class="mt-7 max-w-md font-sans text-[15px] leading-7 text-[#77716C]">
+        <!-- <p class="mt-7 max-w-md font-sans text-[15px] leading-7 text-[#77716C]">
           Explore a curated selection of wholesale footwear created for
           retailers looking for variety, regular stock and everyday styles.
-        </p>
+        </p> -->
 
         <!-- CTA -->
         <button
           type="button"
           @click="goToProducts"
-          class="mt-8 bg-[#252220] px-7 py-4 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
+          class="mt-8 rounded-lg bg-[#252220] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
         >
           Explore Collection
         </button>
       </div>
 
       <!-- Image Carousel -->
-      <div class="mt-10">
+      <div>
         <!-- Image -->
         <div class="overflow-hidden border border-black/10 bg-[#EDE8DE]">
           <Transition name="fade" mode="out-in">
@@ -113,7 +112,7 @@ const goToProducts = () => {
               aria-label="Previous shoe"
               class="flex h-9 w-9 items-center justify-center border border-black/10 text-[#252220] transition hover:border-[#252220] hover:bg-[#252220] hover:text-white"
             >
-              ←
+              ‹
             </button>
 
             <button
@@ -122,7 +121,7 @@ const goToProducts = () => {
               aria-label="Next shoe"
               class="flex h-9 w-9 items-center justify-center border border-black/10 text-[#252220] transition hover:border-[#252220] hover:bg-[#252220] hover:text-white"
             >
-              →
+              ›
             </button>
           </div>
         </div>

@@ -1,13 +1,14 @@
 <script setup>
 import shoe1 from "~/assets/images/hero/shoe-1.jpeg";
 import shoe2 from "~/assets/images/hero/shoe-2.jpeg";
-import shoe3 from "~/assets/images/hero/shoe-3.jpeg";
+import shoe5 from "~/assets/images/hero/shoe-5.jpeg";
 import shoe4 from "~/assets/images/hero/shoe-4.jpeg";
 import RetailSection from "~/components/home/RetailSection.vue";
 
 const categories = ["All", "Sneakers", "Sports", "Casual", "Formal", "Sandals"];
 
 const activeCategory = ref("All");
+
 const newArrivals = [
   {
     name: "TBL Sports Shoes",
@@ -16,22 +17,22 @@ const newArrivals = [
     image: shoe1,
   },
   {
+    name: "Adivon Sneakers",
+    code: "263049",
+    category: "Sneakers",
+    image: shoe4,
+  },
+  {
     name: "Adivon Sports Shoes",
     code: "263050",
     category: "Sports",
     image: shoe2,
   },
   {
-    name: "Urban Street Shoe",
-    code: "IBL-003",
+    name: "TBL Sneakers",
+    code: "p-2",
     category: "Sneakers",
-    image: shoe3,
-  },
-  {
-    name: "Adivon Sneakers",
-    code: "263049",
-    category: "Sneakers",
-    image: shoe4,
+    image: shoe5,
   },
 ];
 
@@ -49,33 +50,22 @@ const filteredArrivals = computed(() => {
 <template>
   <section class="min-h-screen bg-[#F7F2EA] text-[#252220]">
     <!-- Header -->
-    <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 md:px-8 md:pt-24 md:pb-20">
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 md:px-8 md:pt-14 md:pb-10">
       <!-- Always visible -->
       <p
-        class="text-sm font-medium uppercase tracking-[0.2em] text-[#A06B3F] md:mt-16 md:text-[18px] md:tracking-[0.28em]"
+        class="text-sm font-medium uppercase tracking-[0.2em] text-[#A06B3F] md:text-[16px] md:tracking-[0.24em]"
       >
         New Arrivals
       </p>
 
       <!-- Desktop only -->
       <div class="hidden md:block">
-        <h1
-          class="mt-5 font-serif text-5xl font-medium leading-[1.05] md:text-6xl"
-        >
-          Fresh Styles.
-          <br />
-          Regular Stock.
+        <h1 class="mt-4 font-serif text-4xl font-medium leading-[1.05]">
+          Discover the latest footwear
         </h1>
-
-        <p class="mt-6 max-w-xl text-[15px] leading-7 text-[#77716C]">
-          Discover the latest footwear added to our wholesale collection.
-        </p>
       </div>
-
-      <div
-        class="hidden md:block md:mt-12 md:border-t md:border-black/10"
-      ></div>
     </div>
+
     <!-- Filters -->
     <div class="mx-auto flex w-full max-w-7xl justify-end px-6 md:px-8">
       <ProductFilters
@@ -83,9 +73,10 @@ const filteredArrivals = computed(() => {
         :categories="categories"
       />
     </div>
+
     <!-- Product Grid -->
     <div
-      class="mx-auto grid max-w-7xl grid-cols-2 gap-x-3 gap-y-8 px-6 py-10 md:gap-x-6 md:gap-y-14 md:px-8 md:py-16 lg:grid-cols-4"
+      class="mx-auto grid max-w-7xl grid-cols-2 gap-x-3 gap-y-8 px-6 py-10 md:gap-x-6 md:gap-y-14 md:px-8 md:pt-10 md:pb-16 lg:grid-cols-4"
     >
       <ProductCard
         v-for="product in filteredArrivals"
@@ -96,6 +87,8 @@ const filteredArrivals = computed(() => {
         :image="product.image"
       />
     </div>
+
+    <!-- Empty State -->
     <div
       v-if="filteredArrivals.length === 0"
       class="mx-auto max-w-7xl px-6 py-20 text-center md:px-8"
@@ -108,7 +101,8 @@ const filteredArrivals = computed(() => {
         There are currently no new arrivals available in this category.
       </p>
     </div>
+
     <!-- Retail Section -->
-    <RetailSection />
+    <!-- <RetailSection /> -->
   </section>
 </template>

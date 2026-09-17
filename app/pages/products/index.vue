@@ -1,12 +1,15 @@
 <script setup>
 import { ref, computed } from "vue";
 
-import shoe1 from "~/assets/images/hero/shoe-1.jpeg";
-import shoe2 from "~/assets/images/hero/shoe-2.jpeg";
-import shoe3 from "~/assets/images/hero/shoe-3.jpeg";
-import shoe4 from "~/assets/images/hero/shoe-4.jpeg";
-import shoe5 from "~/assets/images/hero/shoe-5.jpeg";
-import shoe6 from "~/assets/images/hero/shoe-6.jpeg";
+import shoe1 from "~/assets/images/products/shoe-1.jpeg";
+import shoe2 from "~/assets/images/products/shoe-2.jpeg";
+import shoe3 from "~/assets/images/products/shoe-3.jpeg";
+import shoe4 from "~/assets/images/products/shoe-4.jpeg";
+import shoe5 from "~/assets/images/products/shoe-5.jpeg";
+import shoe6 from "~/assets/images/products/shoe-6.jpeg";
+import shoe7 from "~/assets/images/products/shoe-7.jpeg";
+import shoe8 from "~/assets/images/products/shoe-8.jpeg";
+import shoe9 from "~/assets/images/products/shoe-9.jpeg";
 import RetailSection from "~/components/home/RetailSection.vue";
 
 const categories = ["All", "Sneakers", "Sports", "Casual", "Formal", "Sandals"];
@@ -27,17 +30,47 @@ const products = [
     category: "Sports",
     image: shoe2,
   },
-  {
-    name: "Urban Street Shoe",
-    code: "IBL-003",
-    category: "Sneakers",
-    image: shoe3,
-  },
+  // {
+  //   name: "TBL Sport Shoes",
+  //   code: "9127",
+  //   category: "Sports",
+  //   image: shoe3,
+  // },
   {
     name: "Adivon Sneakers",
     code: "263049",
     category: "Sneakers",
     image: shoe4,
+  },
+  {
+    name: "TBL Sneakers",
+    code: "p-2",
+    category: "Sneakers",
+    image: shoe5,
+  },
+  {
+    name: "Songta Badminton Shoes",
+    code: "145",
+    category: "Sports",
+    image: shoe6,
+  },
+  {
+    name: "TBL Running Shoes",
+    code: "9126",
+    category: "Casual",
+    image: shoe7,
+  },
+  {
+    name: "Songta Sneakers",
+    code: "299",
+    category: "Sneakers",
+    image: shoe8,
+  },
+  {
+    name: "Adivon Casual Shoes",
+    code: "263040",
+    category: "Casual",
+    image: shoe9,
   },
 ];
 
@@ -69,7 +102,7 @@ const filteredProducts = computed(() => {
 
 <template>
   <section class="min-h-screen bg-[#F7F2EA] text-[#252220]">
-    <div class="mx-auto max-w-7xl px-6 pt-16 pb-20 md:px-8 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 pb-20 md:px-8 md:py-5">
       <!-- Heading -->
       <div class="hidden max-w-2xl md:block">
         <p
@@ -81,14 +114,8 @@ const filteredProducts = computed(() => {
         <h1
           class="mt-5 font-serif text-5xl font-medium leading-[1.05] md:text-6xl"
         >
-          Wholesale Footwear
-          <br />
-          Collection
+          Explore our footwear collection
         </h1>
-
-        <p class="mt-6 max-w-xl text-[15px] leading-7 text-[#77716C]">
-          Explore our footwear collection across everyday styles and categories.
-        </p>
       </div>
 
       <!-- Filters -->
@@ -114,7 +141,7 @@ const filteredProducts = computed(() => {
 
       <!-- Product Grid -->
       <div
-        class="mt-10 grid grid-cols-2 gap-x-3 gap-y-8 border-t border-black/10 pt-10 md:mt-16 md:gap-x-6 md:gap-y-14 md:pt-14 lg:grid-cols-4"
+        class="mt-10 grid grid-cols-2 gap-x-3 gap-y-8 pt-10 md:mt-2 md:gap-x-6 md:gap-y-14 md:pt-14 lg:grid-cols-4"
       >
         <ProductCard
           v-for="product in filteredProducts"

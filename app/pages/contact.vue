@@ -39,10 +39,10 @@ ${message.value}
       >
         Ready to stock your store?
       </h2>
-      <p class="mt-6 text-base leading-7 text-[#77716C] text-center">
+      <!-- <p class="mt-6 text-base leading-7 text-[#77716C] text-center">
         Tell us what you're looking for and we'll help you with product
         availability, current collections and wholesale details.
-      </p>
+      </p> -->
 
       <div class="mt-8 border-t border-black/10"></div>
     </div>
@@ -156,7 +156,7 @@ ${message.value}
         <button
           type="button"
           @click="sendToWhatsApp"
-          class="mt-8 bg-[#252220] px-7 py-4 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
+          class="mt-8 rounded-lg bg-[#252220] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-[#A06B3F]"
         >
           Send Inquiry
         </button>
